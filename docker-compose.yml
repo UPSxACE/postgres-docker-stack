@@ -15,9 +15,9 @@ services:
       - "5432:5432"
     labels:
       - traefik.enable=true
-      - traefik.http.routers.web.rule=Host(`${HOSTNAME}`)
-      - traefik.http.routers.web.entrypoints=websecure
-      - traefik.http.routers.web.tls.certresolver=${CERTRESOLVER}
+      - traefik.http.routers.postgres.rule=Host(`${HOSTNAME}`)
+      - traefik.http.routers.postgres.entrypoints=websecure
+      - traefik.http.routers.postgres.tls.certresolver=${CERTRESOLVER}
       - io.portainer.accesscontrol.public=true
 
 networks:
